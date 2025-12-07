@@ -222,6 +222,24 @@ name="user" >
 <h1>{{countt()}}</h1>
 <button (click)="updateValue('inc')">Increment</button>
 
+<hr>
+
+<!--Data type with signals-->
+<h1 style="padding: 2px; text-align: center;">Data type with signals</h1>
+<h2>{{dataa()}}</h2>
+<!--<h2>{{ccount}}</h2>-->
+<button (click)="updateSignal()">Update Data</button>
+
+<hr>
+<!--Computed Signals-->
+<h1 style="padding: 2px; text-align: center;">Computed Signals</h1>
+<h1>{{ z() }}</h1>
+<button (click)="showValue()">showValue</button>
+<button (click)="updateX()">updateX</button>
+
+<hr>
+
+
 
 
 

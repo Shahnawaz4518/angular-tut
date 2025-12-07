@@ -1,4 +1,4 @@
-import { Component, signal, effect } from '@angular/core';
+import { Component, signal, effect,computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
@@ -172,6 +172,7 @@ s=20
       console.log(this.countt());  
     });
   }
+    
 updateValue(val:string){
 // this.countt.set(this.countt()+1);
  //this.s=this.s+1;
@@ -181,5 +182,28 @@ updateValue(val:string){
     this.countt.set(this.countt() - 1);  // decrease
   }
  }
+
+ //Data type with signals
+ dataa = signal<number | string>(10);
+ //ccount = computed(() => 200);
+
+ updateSignal(){
+  this.dataa.set("Hello");
+ }
+
+ // Computed Signals
+ a=signal(10);
+ y=signal(20);
+ z=computed(()=>this.a()+this.y())
+showValue(){
+  console.log(this.z());
+  this.a.set(200);
+  console.log(this.z()); 
+}
+updateX()
+{
+  this.a.set(200);
+}
+
 }
 
